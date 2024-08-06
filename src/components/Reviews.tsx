@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { HTMLAttributes, use, useEffect, useRef, useState } from "react";
+import { HTMLAttributes, useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { cn } from "@/lib/utils";
@@ -146,6 +146,8 @@ function ReviewGrid() {
           />
         </>
       ) : null}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-100" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-100" />
     </div>
   );
 }
